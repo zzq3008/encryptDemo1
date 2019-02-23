@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+function decodeUnicode(str) {
+
+    str = str.replace(/\\/g, "%");
+
+    return unescape(str);
+
+}
+
+console.log(decodeUnicode('%22%3A%2211111%22%2C%22'))
+</script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+	<div>
+		<span>请输入要爬取得网址：</span>
+		<input type="text" id="uurl" value=""/>
+		<input type="button" value="抓取" onclick="get()"/>
+	</div>
+	
+	<h1>结果展示</h1>
+	<span id="show">
+		
+	</span>
+	
+</body>
+
+<script type="text/javascript">
+	function get(){
+		var url =$("#uurl").val();
+		if(url=="" || (url.indexOf("http:")==-1 && url.indexOf("https:")==-1)){
+			alert("请输入正确的网址")
+		}else{
+			$.ajax({
+				url: "/getUrl", 
+				data:{
+					url:url
+				},
+				context: document.body, 
+				success: function(data){
+			        //console.log(data);
+			        $("#show").text(data.body);
+			    }
+			})
+		}
+	}
+	
+
+</script>
+
+
+</html>
