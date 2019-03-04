@@ -27,7 +27,7 @@ public class Demo1Controller {
 	public Map<String, String> test1(@RequestBody Map<String, String> mapp){
 		Map<String, String> map = new HashMap<>();
 		map.put("key1", "hello");
-		map.put("name", "lily");
+		map.put("name", "lily1");
 		return map;
 	}
 	
