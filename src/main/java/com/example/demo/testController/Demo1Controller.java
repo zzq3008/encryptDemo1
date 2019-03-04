@@ -28,6 +28,7 @@ public class Demo1Controller {
 		Map<String, String> map = new HashMap<>();
 		map.put("key1", "hello");
 		map.put("name", "lily");
+		map.put("name2", "lily");
 		return map;
 	}
 	
